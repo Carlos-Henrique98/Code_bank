@@ -32,6 +32,10 @@ func main() {
 	}
 }
 
+// func main() {
+// 	fmt.Println("hello")
+// }
+
 func setupTransactionUseCase(db *sql.DB) usecase.UseCaseTransaction {
 	transactionRepository := repository.NewTransactionRepositoryDb(db)
 	useCase := usecase.NewUseCaseTransaction(transactionRepository)
